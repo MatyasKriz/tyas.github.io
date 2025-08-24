@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <section class="mt-8">
+    <div class="prose dark:prose-invert mb-10">
+      <h1>{{ .Title }}</h1>
+    </div>
+
+    <div class="grid xl:grid-cols-2 content-start gap-4">
+      {{ range .Pages }}
+        <div class="prose dark:prose-invert bg-neutral-100 dark:bg-neutral-900
+        rounded-xl shadow-sm hover:shadow-xs dark:border-1 dark:border-neutral-400 px-8 pt-8
+        grid grid-cols-2 content-start dark:hover:border-neutral-200 transition-all duration-300 dark:duration-500">
+          {{ $icon := .Resources.Get .Params.icon }}
+          <img src="{{ $icon.RelPermalink }}" class="nozoom not-prose size-24
+          {{ if .Params.watch }} rounded-full {{ else }} rounded-2xl {{ end }}">
+
+          <a href="{{ .Params.link }}" alt="{{ .Title }}" class="ml-auto">
+            {{ $appstore := resources.Get "img/appstore.png" }}
+            <img src="{{ $appstore.RelPermalink }}" class="nozoom not-prose w-36">
+          </a>
+
+          <h2 class="mt-6 mb-0 col-span-2">
+            {{ .Title }}
+          </h2>
+          <div class="col-span-2 mt-0">
+            {{ .Content }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="prose dark:prose-invert article-content mt-8 max-w-max">
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+
+    {{ $image := .Resources.Get .Params.image }}
+    {{ with $image }}
+      <img src="{{ .RelPermalink }}" class="h-48 object-scale-down mt-16 mb-4 rounded-xl">
+    {{ end }}
+  </section>
+{{ end }}

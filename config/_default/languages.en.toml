@@ -1,0 +1,24 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "M@tyasK"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  # logo = "img/logo.png"
+  description = "My personal website"
+  copyright = "You like to read the full story, **I like that about you**."
+  dateFormat = "2 January 2006"
+
+[params.author]
+  name = "Matyas Kriz"
+  image = "img/avatar2.jpg"
+  headline = "Do it well or get some help. 💻"
+  bio = "This thing on?"
+  links = [
+     { github = "https://www.github.com/MatyasKriz" },
+     { linkedin = "https://www.linkedin.com/in/matyaskriz" },
+     { bluesky = "https://bsky.app/profile/ma.tyas.cz" },
+  ]
