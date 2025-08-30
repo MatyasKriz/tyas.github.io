@@ -1,0 +1,11 @@
+# Configure Cloudflare Worker
+
+name = "tyas-blog"
+compatibility_date = "2025-08-30"
+
+[build]
+command = "./build.sh"
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
